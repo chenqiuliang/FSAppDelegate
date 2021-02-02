@@ -8,8 +8,11 @@
 #import <Foundation/Foundation.h>
 #import "FSAppDelegateServiceMetaInfo.h"
 #import "FSAppDelegateServicePriority.h"
+#import "FSAppDelegateService.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+#define ExecuteInLaunchQueue(block) [[DYAppDelegateServiceManager sharedManager] executeInLaunchQueue:block]
 
 #ifndef FSADServicesSectionName
 #define FSADServicesSectionName "__FSAppDelegateServices"
@@ -25,12 +28,25 @@ __attribute__(                                                             \
         .className = #_className_, .priority = _priority_,                     \
 };
 
+@interface FSAppDelegateServiceItem : NSObject
+@property (nonatomic, strong) id<FSAppDelegateService> service;
+@property (nonatomic, assign) NSUInteger priority; // 优先级
+@end
+
+
 @interface FSAppDelegateServiceManager : NSObject
 
 /**
  * 单例
  */
 + (instancetype)sharedManager;
+
+/**
+ 注册service
+
+ @param service 服务
+ */
+- (void)registerService:(FSAppDelegateServiceItem *)service;
 
 /**
  * 加载顺序预处理
@@ -44,16 +60,6 @@ __attribute__(                                                             \
 /// 转发消息到实现了方法的服务方
 /// @param anInvocation NSInvocation对象
 - (void)proxyForwardInvocation:(NSInvocation *)anInvocation;
-
-@end
-/**
-* appdelegate服务管理者 分类
-*/
-@interface FSAppDelegateServiceManager (Object)
-/// 设置key-value对
-- (void)setObject:(id _Nonnull)value forKey:(NSString *_Nonnull)key;
-/// 取值
-- (nullable id)objectForKey:(NSString *_Nullable)key;
 
 @end
 /**

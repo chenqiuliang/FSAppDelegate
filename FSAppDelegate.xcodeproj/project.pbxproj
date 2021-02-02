@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		077696A525C81C3F008CCFD8 /* FSAppDelegateService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAppDelegateService.h; sourceTree = "<group>"; };
 		07CE9CC225C29B0900B260E7 /* FSAppDelegateServicePriority.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAppDelegateServicePriority.h; sourceTree = "<group>"; };
 		07E55DD025B6F3CF00686ACF /* FSAppDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSAppDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E55DD325B6F3CF00686ACF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 				07E55DF325B6F4D700686ACF /* FSAppDelegateServiceManager.m */,
 				07E55DF625B6F5E600686ACF /* FSAppDelegateServiceMetaInfo.h */,
 				07CE9CC225C29B0900B260E7 /* FSAppDelegateServicePriority.h */,
+				077696A525C81C3F008CCFD8 /* FSAppDelegateService.h */,
 			);
 			path = FSAppDelegateKit;
 			sourceTree = "<group>";

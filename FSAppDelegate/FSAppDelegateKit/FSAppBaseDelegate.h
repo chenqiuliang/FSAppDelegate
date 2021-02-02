@@ -11,7 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FSAppBaseDelegate : UIResponder <UIApplicationDelegate>
 
+@property (strong, nonatomic) UIWindow *window;
 
+- (void)setSupportedInterfaceOrientation:(UIInterfaceOrientationMask)orientation;
 
 @end
 
