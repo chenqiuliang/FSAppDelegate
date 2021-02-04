@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0746F75C25CBA26F0033923D /* FSAppDelegateBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0746F75B25CBA26F0033923D /* FSAppDelegateBaseService.m */; };
+		0746F76125CBA86D0033923D /* FSAppDelegateUIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0746F76025CBA86D0033923D /* FSAppDelegateUIService.m */; };
 		07E55DD525B6F3CF00686ACF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E55DD425B6F3CF00686ACF /* AppDelegate.m */; };
 		07E55DD825B6F3CF00686ACF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E55DD725B6F3CF00686ACF /* SceneDelegate.m */; };
 		07E55DDB25B6F3CF00686ACF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E55DDA25B6F3CF00686ACF /* ViewController.m */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0746F75A25CBA26F0033923D /* FSAppDelegateBaseService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAppDelegateBaseService.h; sourceTree = "<group>"; };
+		0746F75B25CBA26F0033923D /* FSAppDelegateBaseService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegateBaseService.m; sourceTree = "<group>"; };
+		0746F75F25CBA86D0033923D /* FSAppDelegateUIService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAppDelegateUIService.h; sourceTree = "<group>"; };
+		0746F76025CBA86D0033923D /* FSAppDelegateUIService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAppDelegateUIService.m; sourceTree = "<group>"; };
 		077696A525C81C3F008CCFD8 /* FSAppDelegateService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAppDelegateService.h; sourceTree = "<group>"; };
 		07CE9CC225C29B0900B260E7 /* FSAppDelegateServicePriority.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAppDelegateServicePriority.h; sourceTree = "<group>"; };
 		07E55DD025B6F3CF00686ACF /* FSAppDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSAppDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +57,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0746F75925CBA24F0033923D /* AppDelegateService */ = {
+			isa = PBXGroup;
+			children = (
+				0746F75A25CBA26F0033923D /* FSAppDelegateBaseService.h */,
+				0746F75B25CBA26F0033923D /* FSAppDelegateBaseService.m */,
+				0746F75F25CBA86D0033923D /* FSAppDelegateUIService.h */,
+				0746F76025CBA86D0033923D /* FSAppDelegateUIService.m */,
+			);
+			path = AppDelegateService;
+			sourceTree = "<group>";
+		};
 		07E55DC725B6F3CF00686ACF = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +87,7 @@
 		07E55DD225B6F3CF00686ACF /* FSAppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				0746F75925CBA24F0033923D /* AppDelegateService */,
 				07E55DED25B6F3DB00686ACF /* FSAppDelegateKit */,
 				07E55DD325B6F3CF00686ACF /* AppDelegate.h */,
 				07E55DD425B6F3CF00686ACF /* AppDelegate.m */,
@@ -170,11 +188,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E55DDB25B6F3CF00686ACF /* ViewController.m in Sources */,
+				0746F75C25CBA26F0033923D /* FSAppDelegateBaseService.m in Sources */,
 				07E55DF025B6F48600686ACF /* FSAppBaseDelegate.m in Sources */,
 				07E55DD525B6F3CF00686ACF /* AppDelegate.m in Sources */,
 				07E55DF425B6F4D700686ACF /* FSAppDelegateServiceManager.m in Sources */,
 				07E55DE625B6F3D100686ACF /* main.m in Sources */,
 				07E55DD825B6F3CF00686ACF /* SceneDelegate.m in Sources */,
+				0746F76125CBA86D0033923D /* FSAppDelegateUIService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

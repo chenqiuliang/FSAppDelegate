@@ -15,16 +15,16 @@ NS_ASSUME_NONNULL_BEGIN
 #define ExecuteInLaunchQueue(block) [[DYAppDelegateServiceManager sharedManager] executeInLaunchQueue:block]
 
 #ifndef FSADServicesSectionName
-#define FSADServicesSectionName "__FSAppDelegateServices"
+#define FSADServicesSectionName "__FSADServices"
 #endif
 
-/// 动态注册服务，Example：FSADServiceRegister(DYDanmuController, 6)
-/// @param _className_ 类名（如 FSLoginController）
-/// @param _priority_ 加载优先级（如 FSADServicePriorityLogin 定义在枚举中）
-#define FSADServiceRegister(_className_, _priority_)                      \
+/// 动态注册服务，FSAppDelegateServiceRegister(FSAppDelegateBaseService, 6)
+/// @param _className_ 类名（如 FSAppDelegateBaseService）
+/// @param _priority_ 加载优先级（如 FSAppDelegateServicePriority 定义在枚举中）
+#define FSAppDelegateServiceRegister(_className_, _priority_)                      \
 __attribute__(                                                             \
-    (used)) static struct FSAppDelegateServiceMetaInfo DYADModule##_class_        \
-    __attribute((used, section("__DATA, __FSAppDelegateServices"))) = {               \
+    (used)) static struct FSAppDelegateServiceMetaInfo FSADModule##_class_        \
+    __attribute((used, section("__DATA, __FSADServices"))) = {               \
         .className = #_className_, .priority = _priority_,                     \
 };
 
